@@ -29,5 +29,9 @@ public class Lampada {
     public boolean IsLigada() {
         return this.estado;
     }
+
+    public boolean IsQueimada() {
+        return this.queimada;
+    } 
 }
 

@@ -28,4 +28,13 @@ public class Lustre {
         this.ligado = false;
     
     }
+
+    public boolean temLampadaQueimada() {
+        for (int i = 0; i < this.lampadas.length; i++) {
+            if (this.lampadas[i].IsQueimada()) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
