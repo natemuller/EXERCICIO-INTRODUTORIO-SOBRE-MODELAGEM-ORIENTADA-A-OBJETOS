@@ -37,4 +37,8 @@ public class Lustre {
         }
         return false;
     }
+
+    public int [] posicoesLampadasQueimadas () {
+        
+    }
 }
