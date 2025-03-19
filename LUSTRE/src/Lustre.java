@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Lustre {
 
     private boolean ligado;
@@ -38,7 +40,21 @@ public class Lustre {
         return false;
     }
 
-    public int [] posicoesLampadasQueimadas () {
-        
+    public String posicoesLampadasQueimadas() {
+        int count = 0;
+        for (int i = 0; i < this.lampadas.length; i++) {
+            if (this.lampadas[i].IsQueimada()) {
+                count++;
+            }
+        }
+        int[] posicoesDasLampadasQueimadas = new int[count];
+        int j = 0;
+        for (int i = 0; i < this.lampadas.length; i++) {
+            if (this.lampadas[i].IsQueimada()) {
+                posicoesDasLampadasQueimadas[j] = i;
+                j++;
+            }
+        }
+        return Arrays.toString(posicoesDasLampadasQueimadas);
     }
 }
